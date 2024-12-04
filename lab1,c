@@ -5,12 +5,12 @@ int main() {
   printf("Введите два числа через пробел N и k:\n");
   scanf("%d %d", &N, &k);
 
-    if (N < 0  N >= 99) {
+    if (N < 0  || N >= 99) {
         printf("Ошибка.\n");
         return 1;
     }
 
-    if (k < 1  k > 5) {
+    if (k < 1  || k > 5) {
         printf("Ошибка.\n");
         return 1;
     }
