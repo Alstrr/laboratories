@@ -1,24 +1,17 @@
 #include <stdio.h>
+#include <math.h>
+#include <locale.h>
+
+/*Дано число N<99. Дописать в начало и в конец числа цифру k. (диапазон возможных 
+k, например, от 1 до 5).*/
 
 int main() {
-  int N,k;
-  printf("Введите два числа через пробел N и k:\n");
-  scanf("%d %d", &N, &k);
-
-    if (N < 0  || N >= 99) {
-        printf("Ошибка.\n");
-        return 1;
-    }
-
-    if (k < 1  || k > 5) {
-        printf("Ошибка.\n");
-        return 1;
-    }
-
+    setlocale(LC_ALL, "Russian");
+    int N, k;
+    printf("Enter N and k: ");
+    scanf("%d %d", &N, &k);
     int result = k * 1000 + N * 10 + k;
 
-    printf("%d\n", result);
-
+    printf("\nResult: %d", result);
     return 0;
-
 }
