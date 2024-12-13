@@ -29,10 +29,10 @@ int main() {
 
     double angleA = acos((b * b + c * c - a * a) / (2 * b * c));
 
-    double bisectorLength = (2 * b * c * cos(angleA / 2)) / (b + c);
+    double Length = (2 * b * c * cos(angleA / 2)) / (b + c);
 
     cout << "Тип треугольника: " << type << endl;
-    cout << "Длина биссектрисы (к стороне a): " << bisectorLength << endl;
+    cout << "Длина биссектрисы (к стороне a): " << Length << endl;
 
     return 0;
 }
