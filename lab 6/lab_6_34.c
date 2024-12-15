@@ -1,4 +1,4 @@
-/* Даны натуральное число и действительное . Вычислить: x/1! + x/2! + ... + 1/n!/
+/* Даны натуральное число и действительное . Вычислить: x/1! + x/2! + ... + 1/n! */
 
 #include <stdio.h>
 #include <locale.h>
@@ -8,7 +8,7 @@ int main() {
     int n;
     double x;
     double sum = 0.0;
-    double factorial = 1.0;
+    double fact = 1.0;
     int i = 1;
 
     printf("Введите натуральное число n: ");
@@ -17,8 +17,8 @@ int main() {
     scanf("%lf", &x);
 
     do {
-        factorial *= i;
-        sum += x / factorial;
+        fact *= i;
+        sum += x / fact;
         i++; 
     } while (i <= n);
 
