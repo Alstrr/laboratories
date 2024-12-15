@@ -11,7 +11,7 @@ int main() {
     setlocale(LC_ALL, "Russian");
     int A[MAX][MAX];
     int N, M;
-    int sumAbove = 0, sumBelow = 0;
+    int sumup = 0, sumlow = 0;
 
     printf("Введите количество строк (N): ");
     scanf("%d", &N);
@@ -28,15 +28,15 @@ int main() {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < M; j++) {
             if (i < j) {
-                sumAbove += A[i][j];
+                sumup += A[i][j];
             } else if (i > j) {
-                sumBelow += A[i][j]; 
+                sumlow += A[i][j]; 
             }
         }
     }
 
-    printf("Сумма элементов выше главной диагонали: %d\n", sumAbove);
-    printf("Сумма элементов ниже главной диагонали: %d\n", sumBelow);
+    printf("Сумма элементов выше главной диагонали: %d\n", sumup);
+    printf("Сумма элементов ниже главной диагонали: %d\n", sumlow);
 
     return 0;
 }
