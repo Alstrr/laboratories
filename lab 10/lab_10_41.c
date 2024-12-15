@@ -18,9 +18,9 @@ void maxsum(int arr[], int n) {
     int index2 = 1;
 
     for (int i = 1; i < n - 1; i++) {
-        int currentSum = arr[i] + arr[i + 1];
-        if (currentSum > maxSum) {
-            maxSum = currentSum;
+        int curSum = arr[i] + arr[i + 1];
+        if (curSum > maxSum) {
+            maxSum = curSum;
             index1 = i;
             index2 = i + 1;
         }
