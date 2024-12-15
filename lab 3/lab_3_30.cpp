@@ -10,12 +10,12 @@ using namespace std;
 int main() {
     setlocale(LC_ALL, "Russian");
 
-    int atomicNumber;
+    int Number;
 
-    cout << "Введите порядковый (атомный) номер щелочного металла (3 для Li, 11 для Na, 19 для K, 37 для Rb, 55 для Cs): ";
-    cin >> atomicNumber;
+    cout << "Введите порядковый (атомный) номер щелочного металла (3 Li, 11 Na, 19 K, 37 Rb, 55 Cs): ";
+    cin >> Number;
 
-    switch (atomicNumber) {
+    switch (Number) {
     case 3:
         cout << "Литий (Li): Цвет пламени - красный." << endl;
         break;
