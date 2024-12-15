@@ -7,8 +7,6 @@
 int main() {
     setlocale(LC_ALL, "Russian");
     int number;
-
-    // Ввод 10 чисел
     printf("Введите 10 чисел:\n");
     for (int i = 0; i < 10; i++) {
         printf("Число %d: ", i + 1);
