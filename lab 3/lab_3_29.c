@@ -12,7 +12,7 @@ int main() {
     printf("Введите температуру кипения в градусах Цельсия: ");
     scanf("%f", &temperature);
 
-    switch ((int)(temperature * 10)) { // Умножаем на 10 для работы с целыми числами
+    switch ((int)(temperature * 10)) { //чтобы бфли целые числа
         case 1000: // 100.0
             printf("Вещество: Вода\n");
             break;
