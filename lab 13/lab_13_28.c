@@ -4,16 +4,14 @@
 
 struct Street {
     char name[50];
-    float length; // протяженность в километрах
-    int houseCount; // количество домов
-    int intersectionCount; // количество перекрестков
+    float length;
+    int houseCount; 
+    int intersectionCount;
 };
 
 int main() {
     setlocale(LC_ALL, "Russian");
-    struct Street streets[3]; // массив из 3-х улиц
-
-    // Пример заполнения полей структуры
+    struct Street streets[3]; 
     snprintf(streets[0].name, sizeof(streets[0].name), "Улица Орджиникидзе");
     streets[0].length = 4.5;
     streets[0].houseCount = 70;
@@ -29,7 +27,6 @@ int main() {
     streets[2].houseCount = 102;
     streets[2].intersectionCount = 12;
 
-    // Вывод информации об улицах
     for (int i = 0; i < 3; i++) {
         printf("Улица: %s\n", streets[i].name);
         printf("Протяженность: %.2f км\n", streets[i].length);
