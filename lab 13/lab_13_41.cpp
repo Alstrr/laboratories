@@ -1,40 +1,49 @@
 /* Определить структуру с именем Hat содержащую следующие поля: страна
 производитель; размер шапка; материал, из которого изготовлен; цена. */
 
-
 #include <iostream>
-#include <string>
+#include <cstring>
 
 using namespace std;
-
 struct Hat {
-    string country;   
-    string size;       
-    string material;  
-    double price;     
+    char country[100];      
+    char size[10];         
+    char material[100];    
+    float price;           
 };
-
 int main() {
     setlocale(LC_ALL, "Russian");
-    Hat myHat;
+    const int HAT_COUNT = 3; 
+    Hat hats[HAT_COUNT];  
+    for (int i = 0; i < HAT_COUNT; i++) {
+        cout << "Введите данные о шапке " << i + 1 << ":" << endl;
 
-    cout << "Введите страну производитель: ";
-    getline(cin, myHat.country);
+        cout << "Страна производитель: ";
+        cin >> hats[i].country;
 
-    cout << "Введите размер шапки: ";
-    getline(cin, myHat.size);
+        cout << "Размер шапки: ";
+        cin >> hats[i].size;
 
-    cout << "Введите материал шапки: ";
-    getline(cin, myHat.material);
+        cout << "Материал: ";
+        cin >> hats[i].material;
 
-    cout << "Введите цену шапки: ";
-    cin >> myHat.price;
+        cout << "Цена: ";
+        cin >> hats[i].price;
 
-    cout << "\nИнформация о шапке:\n";
-    cout << "Страна производитель: " << myHat.country << "\n";
-    cout << "Размер шапки: " << myHat.size << "\n";
-    cout << "Материал: " << myHat.material << "\n";
-    cout << "Цена: " << myHat.price << "\n";
+        cout << endl; 
+    }
+
+    cout << "Данные о шапках:" << endl;
+    for (int i = 0; i < HAT_COUNT; i++) {
+        cout << "Шапка " << i + 1 << ":" << endl;
+        cout << "Страна производитель: " << hats[i].country << endl;
+        cout << "Размер шапки: " << hats[i].size << endl;
+        cout << "Материал: " << hats[i].material << endl;
+        cout << "Цена: " << hats[i].price << endl;
+        cout << endl;
+    }
 
     return 0;
 }
+
+
